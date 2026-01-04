@@ -1,4 +1,3 @@
-/* global define, module */
 const Chatbot = {
     defaultResponses: {
         'hello hi': `Hello! How can I help you?`,
@@ -134,47 +133,4 @@ const Chatbot = {
     },
 };
 
-// Define the randomUUID() function if it doesn't exist.
-function uuidPolyfill() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (char) {
-        const randomNumber = Math.random() * 16 | 0;
-        const result = char === 'x' ? randomNumber : (randomNumber & 0x3 | 0x8);
-        return result.toString(16);
-    });
-}
-
-// This code allows Chatbot to be used in both the browser and
-// in NodeJS. This is called UMD (Universal Module Definition).
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD
-        define([], factory);
-    } else if (typeof module === 'object' && module.exports) {
-        // Node/CommonJS
-        module.exports = factory();
-    } else {
-        // Create a fallback if window.crypto is undefined.
-        if (typeof root.crypto === 'undefined') {
-            try {
-                root.crypto = {};
-            } catch (e) { // eslint-disable-line no-unused-vars
-
-            } 
-        }
-
-        // Create a fallback crypto.randomUUID() function.
-        if (root.crypto && typeof root.crypto.randomUUID !== 'function') {
-            try {
-                root.crypto.randomUUID = uuidPolyfill;
-            } catch (e) { // eslint-disable-line no-unused-vars
-                
-            } 
-        }
-
-        // Browser global
-        root.Chatbot = factory();
-        root.chatbot = factory();
-    }
-}(typeof self !== 'undefined' ? self : this, function () {
-    return Chatbot;
-}));
+export default Chatbot;
