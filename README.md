@@ -4,9 +4,7 @@ A modular, responsive chatbot component built with React. This project demonstra
 
 ## 🚀 Features
 * **React Component:** Easy-to-use `<Chatbot />` component that drops into any app.
-* **Universal Logic (UMD):** The core chatbot logic is designed to be environment-agnostic (works in Browser & Node).
 * **Responsive Design:** Optimized for both desktop and mobile views.
-* **Error Handling:** Robust fallbacks for older browsers (e.g., `crypto` polyfills).
 
 ## 🛠️ Tech Stack
 * **Frontend Library:** React.js
