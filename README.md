@@ -1,16 +1,32 @@
-# React + Vite
+# React Chatbot UI 🤖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modular, responsive chatbot component built with React. This project demonstrates how to integrate a conversational interface into a web application, featuring a "Universal" logic layer that works in both browser and Node.js environments.
 
-Currently, two official plugins are available:
+## 🚀 Features
+* **React Component:** Easy-to-use `<Chatbot />` component that drops into any app.
+* **Universal Logic (UMD):** The core chatbot logic is designed to be environment-agnostic (works in Browser & Node).
+* **Responsive Design:** Optimized for both desktop and mobile views.
+* **Error Handling:** Robust fallbacks for older browsers (e.g., `crypto` polyfills).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+* **Frontend Library:** React.js
+* **Language:** JavaScript (ES6+)
+* **Linting:** ESLint (Standard Configuration)
+* **Styling:** CSS
 
-## React Compiler
+## 📦 Installation & Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Open the project folder** in your terminal.
 
-## Expanding the ESLint configuration
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The app should open automatically (usually at http://localhost:5173 or http://localhost:3000).
+
+Created by Yasha Shaw
